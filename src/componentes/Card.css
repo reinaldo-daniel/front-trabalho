@@ -1,0 +1,49 @@
+.card {
+    width: 250px;
+    justify-content: center;
+    margin: 30px;
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #111a21;
+    transition: 0.4s;
+}
+
+.card:hover {
+    background-color: #0b1015;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+img {
+    width: 100%;
+}
+
+.title, .sinopse, .score, .duration, .anoLanc {
+    color: white;
+    font-family: Roboto;
+}
+
+.title {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.sinopse {
+    text-align: justify;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score, .anoLanc, .duration {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: yellow;
+}

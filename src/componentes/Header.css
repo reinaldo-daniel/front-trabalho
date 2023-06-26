@@ -1,0 +1,11 @@
+header {
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: Bungee Shade;
+}
