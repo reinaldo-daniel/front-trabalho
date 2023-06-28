@@ -1,7 +1,9 @@
 .carousel {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 .carousel::-webkit-scrollbar {

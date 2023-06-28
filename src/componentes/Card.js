@@ -1,10 +1,10 @@
-import { AiFillStar, AiFillCalendar, AiFillClockCircle } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 import "./Card.css";
 import Rating from "./Rating";
-// import Timing from "./Duration";
 
-export default function Card({img, title, score, year, genres, synopsis, duration, rating}) {
+export default function Card({id, img, title, score, year, genres, synopsis, duration, rating}) {
     const abreviaTitulo = title.length > 20
         ? title.substring(0, 20) + "..." 
         : title;
@@ -19,30 +19,29 @@ export default function Card({img, title, score, year, genres, synopsis, duratio
             : genre;
     })
 
-    const renderData = ((data) => {
-        return data 
-            ? <p className="anoLanc"><AiFillCalendar className="calendar"/>{year}</p>
-            :null
-    })
-
     return (
         <div className="card">
-            <img src={img} alt={"imagem do anime" + title} />
-            <div className="info">
-                <div className="cabecalho">
-                    <h2 className="title">
-                        {abreviaTitulo}
-                    </h2>
-                    <Rating rating={rating}/>
+            <Link to={`anime/${id}`}>
+                <img src={img} alt={"imagem do anime" + title} />
+                <div className="info">
+                    <div className="cabecalho">
+                        <h2 className="title">
+                            {abreviaTitulo}
+                        </h2>
+                        {rating
+                            ? <Rating rating={rating}/>
+                            :null
+                        }
+                    </div>
+                    <div className="especify">
+                        <p className="score"><AiFillStar className="star"/> {score}/10</p>
+                        <p className="genres">{renderGenres(genres.toString())}</p>
+                    </div>
+                    <p className="sinopse">
+                        {abreviaSinopse}
+                    </p>
                 </div>
-                <div className="especify">
-                    <p className="score"><AiFillStar className="star"/> {score}/10</p>
-                    <p className="genres">{renderGenres(genres.toString())}</p>
-                </div>
-                <p className="sinopse">
-                    {abreviaSinopse}
-                </p>
-            </div>
+            </Link>
         </div>
     )
 }

@@ -26,7 +26,7 @@ export default function Home() {
     }, [])
 
     console.log('====================================');
-    console.log(valor);
+    console.log(animes);
     console.log('====================================');
 
     return(
@@ -65,6 +65,7 @@ export default function Home() {
                             })
                             return <Card 
                             key={anime.mal_id}
+                            id={anime.mal_id}
                             img={anime.images.jpg.image_url}
                             title={anime.title}
                             score={anime.score}

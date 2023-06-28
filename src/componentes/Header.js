@@ -14,11 +14,11 @@ export default function Header({ isScrolled }) {
 
     return(
         <header style={backgroundStyle()}>
-            <h1>AnimeWEB</h1>
+            <Link to="/"><h1>AnimeWEB</h1></Link>
             <nav>
-                <Link>Animes</Link>
-                <Link>Mangás</Link>
-                <Link>Personagens</Link>
+                <Link to="/animes">Animes</Link>
+                <Link to="/mangas">Mangás</Link>
+                <Link to="/personagens">Personagens</Link>
             </nav>
         </header>
     )

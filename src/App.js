@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 import './App.css';
-import Home from "./pages/Home"
+import { Outlet } from "react-router-dom";
+
 import Header from './componentes/Header';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className='app'>
       <Header isScrolled={isScrolled}/>
-      <Home />
+      <Outlet />
     </div>
   );
 }
