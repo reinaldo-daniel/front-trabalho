@@ -9,11 +9,6 @@ import Carregando from "../images/carregando.gif"
 
 export default function Home() {
     const [animes, setAnimes] = useState([]);
-    const [valor, setValor] = useState('');
-
-    const handleChange = (event) => {
-        setValor(event.target.value);
-      };
 
     useEffect(() => {
         axios.get("https://api.jikan.moe/v4/top/anime")
@@ -49,8 +44,8 @@ export default function Home() {
                             }}
                         />
                     </h2>
-                    <form className="pesquisar" onSubmit={handleChange}>
-                        <input className="inputPesquisa" onChange={handleChange} type={"text"} placeholder={"Example: Black Clover"}/>
+                    <form className="pesquisar">
+                        <input className="inputPesquisa" type={"text"} placeholder={"Example: Black Clover"}/>
                         <button type="submit" className="botao"><AiOutlineSearch className="lupa"/></button>
                     </form>
                 </div>

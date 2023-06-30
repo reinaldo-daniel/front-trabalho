@@ -20,7 +20,7 @@ root.render(
           <Route path="/animes" element={<Animes />} />
           <Route path="/mangas" element={<Mangas />} />
           <Route path="/personagens" element={<Personagens />} />
-          <Route path="anime/:id" element={<Anime />} />
+          <Route path="/anime/:id" element={<Anime />} />
           <Route path="pesquisa" element={<Pesquisa />} />
         </Route>
       </Routes>

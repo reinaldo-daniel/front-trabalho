@@ -21,7 +21,7 @@ export default function Card({id, img, title, score, year, genres, synopsis, dur
 
     return (
         <div className="card">
-            <Link to={`anime/${id}`}>
+            <Link to={`/anime/${id}`}>
                 <img src={img} alt={"imagem do anime" + title} />
                 <div className="info">
                     <div className="cabecalho">

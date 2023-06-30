@@ -6,5 +6,5 @@
 
 .app {
   background-color: #1d2a35;
-  height: 100%;
+  min-height: 100vh;
 }

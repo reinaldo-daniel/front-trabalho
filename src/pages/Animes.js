@@ -37,6 +37,7 @@ export default function Animes() {
                             })
                             return <Card 
                             key={anime.mal_id}
+                            id={anime.mal_id}
                             img={anime.images.jpg.image_url}
                             title={anime.title}
                             score={anime.score}
